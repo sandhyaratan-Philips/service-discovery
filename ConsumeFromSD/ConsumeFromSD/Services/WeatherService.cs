@@ -9,7 +9,7 @@ namespace ConsumeFromSD
     {
         DiscoveryHttpClientHandler _handler;
 
-        private const string weather_api = "http://myfocalpoint/api/Weather/SomeActionMethod";
+        private const string weather_api = "/api/Weather/SomeActionMethod";
 
         public WeatherService(IDiscoveryClient client)
         {
@@ -35,7 +35,7 @@ namespace ConsumeFromSD
         private HttpClient GetClient()
         {
             var client = new HttpClient(_handler, false);
-            //client.BaseAddress = new System.Uri("http://localhost:5021/");
+            client.BaseAddress = new System.Uri("http://localhost:5021/");
             return client;
         }
     }
