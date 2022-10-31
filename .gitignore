@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+
+/DNS_SD/RegisterToSd/obj
+/DNS_SD/RegisterToSd/bin
+/DNS_SD/packages
+
+/DNS_SD/.vs
+/.vs
+
+*.user
+
+/ConsumeFromSD/ConsumeFromSD/obj
+/ConsumeFromSD/ConsumeFromSD/bin
+/ConsumeFromSD/packages
+
+/ConsumeFromSD/.vs
