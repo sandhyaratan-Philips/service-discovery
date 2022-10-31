@@ -9,3 +9,10 @@ Note:
 2. Change the euraka server service Url in appsettings for both the applications. bydefault it's "http://localhost:8761/eureka/"
 
 
+to run the dockerized steeltoeoss/eurekaserver image:
+
+Pull the image:
+docker pull steeltoeoss/eurekaserver:latest
+
+run the image:
+docker run -d -p 8761:8761 --name eureka-server -it steeltoeoss/eurekaserver:latest
