@@ -57,10 +57,6 @@ namespace RegisterToSd
                 var instSection = config.GetSection(EurekaInstanceOptions.EUREKA_INSTANCE_CONFIGURATION_PREFIX);
                 EurekaInstanceOptions instOptions = new EurekaInstanceOptions();
                 ConfigurationBinder.Bind(instSection, instOptions);
-                if (einfo != null)
-                {
-                    EurekaPostConfigurer.UpdateConfiguration(config, einfo, instOptions);
-                }
                 var manager = new EurekaApplicationInfoManager(new OptionsMonitorWrapper<EurekaInstanceOptions>(instOptions));
 
                 return new EurekaDiscoveryClient(
